@@ -8,7 +8,7 @@ fn toIndex(x: u32, y: u32) -> usize {
 
 
 impl Layer {
-    pub fn getPixel(self, x: u32, y: u32) -> u32 {
+    pub fn getPixel(&self, x: u32, y: u32) -> u32 {
         let index = toIndex(x, y);
         return self.pixels[index];
     }
